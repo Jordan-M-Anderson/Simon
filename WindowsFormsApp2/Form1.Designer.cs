@@ -55,12 +55,13 @@
             // start
             // 
             this.start.AutoSize = true;
+            this.start.BackColor = System.Drawing.SystemColors.Highlight;
             this.start.Location = new System.Drawing.Point(12, 249);
             this.start.Name = "start";
             this.start.Size = new System.Drawing.Size(156, 43);
             this.start.TabIndex = 6;
             this.start.Text = "Start";
-            this.start.UseVisualStyleBackColor = true;
+            this.start.UseVisualStyleBackColor = false;
             this.start.Click += new System.EventHandler(this.start_Click);
             // 
             // Blue
