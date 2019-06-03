@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.Orange = new System.Windows.Forms.Button();
             this.start = new System.Windows.Forms.Button();
             this.Blue = new System.Windows.Forms.Button();
@@ -38,7 +37,6 @@
             this.Yellow = new System.Windows.Forms.Button();
             this.Score = new System.Windows.Forms.Label();
             this.HighScore = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // Orange
@@ -136,11 +134,6 @@
             this.HighScore.TabIndex = 13;
             this.HighScore.Text = "High Score: 0";
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 200;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -174,7 +167,6 @@
         private System.Windows.Forms.Button Yellow;
         private System.Windows.Forms.Label Score;
         private System.Windows.Forms.Label HighScore;
-        private System.Windows.Forms.Timer timer1;
     }
 }
 

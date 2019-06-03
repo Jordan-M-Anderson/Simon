@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{1C0053BD-8FDF-4B25-8D25-89AD8C81D064}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WindowsFormsApp2</RootNamespace>
-    <AssemblyName>WindowsFormsApp2</AssemblyName>
+    <RootNamespace>SimonSays</RootNamespace>
+    <AssemblyName>SimonSays</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +79,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Default.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Red.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Purple.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orange.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Yellow.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
