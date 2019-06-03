@@ -59,42 +59,36 @@ namespace SimonSays
                 switch (color)
                 {
                     case 0:
-                        //WriteButtonSafe(Orange, Color.Orange);
                         Orange.BackColor = Color.Transparent;
                         Thread.Sleep(200);
                         Orange.BackColor = Color.Orange;
                         break;
 
                     case 1:
-                        //WriteButtonSafe(Blue, Color.Blue);
                         Blue.BackColor = Color.Transparent;
                         Thread.Sleep(200);
                         Blue.BackColor = Color.Blue;
                         break;
 
                     case 2:
-                        //WriteButtonSafe(Green, Color.Green);
                         Green.BackColor = Color.Transparent;
                         Thread.Sleep(200);
                         Green.BackColor = Color.Green;
                         break;
 
                     case 3:
-                        //WriteButtonSafe(Purple, Color.Purple);
                         Purple.BackColor = Color.Transparent;
                         Thread.Sleep(200);
                         Purple.BackColor = Color.Purple;
                         break;
 
                     case 4:
-                        //WriteButtonSafe(Red, Color.Red);
                         Red.BackColor = Color.Transparent;
                         Thread.Sleep(200);
                         Red.BackColor = Color.Red;
                         break;
 
                     case 5:
-                        //WriteButtonSafe(Yellow, Color.Yellow);
                         Yellow.BackColor = Color.Transparent;
                         Thread.Sleep(200);
                         Yellow.BackColor = Color.Yellow;
@@ -122,7 +116,11 @@ namespace SimonSays
             {
                 return;
             }
-            else if (colorList[position] != testColor)
+            else if (colorList[position] == testColor)
+            {
+                position++;
+            }
+            else
             {
                 MessageBox.Show("Game Over... Final Score: " + (colorList.Count - 1));
                 position = 0;
@@ -131,41 +129,21 @@ namespace SimonSays
                 return;
             }
 
-            position++;
-
-            Score.Text = ("Score: " + colorList.Count);
-
-            if (colorList.Count > highScore)
-            {
-                highScore++;
-                HighScore.Text = ("High Score: " + highScore);
-            }
-
             if (position >= colorList.Count)
             {
                 colorList.Add(colorGen.Next(6));
                 position = 0;
                 new Thread(showColors).Start();
             }
-            
-        }
 
-        private void WriteButtonSafe(Button button, Color color)
-        {
-            if (button.InvokeRequired)
+            Score.Text = ("Score: " + (colorList.Count - 1));
+
+            if (colorList.Count - 1 > highScore)
             {
-                var d = new SafeCallDelegate(WriteButtonSafe);
-                Invoke(d, new object[] { button, color });
-                Thread.Sleep(200);
+                highScore++;
+                HighScore.Text = ("High Score: " + highScore);
             }
-            else
-            {
-                Thread.Sleep(200);
-                button.BackColor = Color.Transparent;
-                Thread.Sleep(1000);
-                button.BackColor = color;
-                Thread.Sleep(200);
-            }
+
         }
 
         private void Orange_Click(object sender, EventArgs e)
