@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Media;
 using System.Threading;
 using System.Collections;
 using System.Collections.Generic;
@@ -18,6 +19,15 @@ namespace SimonSays
         private delegate void SafeCallDelegate(Button button, Color color);
         Random colorGen = new Random();
         List<int> colorList = new List<int>();
+        
+        //The sounds added from Recorces and created using Bfxr
+        SoundPlayer orangeSound = new SoundPlayer(SimonSays.Properties.Resources.Orange);
+        SoundPlayer blueSound = new SoundPlayer(SimonSays.Properties.Resources.Blue);
+        SoundPlayer greenSound = new SoundPlayer(SimonSays.Properties.Resources.Green);
+        SoundPlayer yellowSound = new SoundPlayer(SimonSays.Properties.Resources.Yellow);
+        SoundPlayer purpleSound = new SoundPlayer(SimonSays.Properties.Resources.Purple);
+        SoundPlayer redSound = new SoundPlayer(SimonSays.Properties.Resources.Red);
+
 
         bool isActive = false;
         int position = 0;
@@ -60,36 +70,42 @@ namespace SimonSays
                 {
                     case 0:
                         Orange.BackColor = Color.Transparent;
+                        orangeSound.Play();
                         Thread.Sleep(200);
                         Orange.BackColor = Color.Orange;
                         break;
 
                     case 1:
                         Blue.BackColor = Color.Transparent;
+                        blueSound.Play();
                         Thread.Sleep(200);
                         Blue.BackColor = Color.Blue;
                         break;
 
                     case 2:
                         Green.BackColor = Color.Transparent;
+                        greenSound.Play();
                         Thread.Sleep(200);
                         Green.BackColor = Color.Green;
                         break;
 
                     case 3:
                         Purple.BackColor = Color.Transparent;
+                        purpleSound.Play();
                         Thread.Sleep(200);
                         Purple.BackColor = Color.Purple;
                         break;
 
                     case 4:
                         Red.BackColor = Color.Transparent;
+                        redSound.Play();
                         Thread.Sleep(200);
                         Red.BackColor = Color.Red;
                         break;
 
                     case 5:
                         Yellow.BackColor = Color.Transparent;
+                        yellowSound.Play();
                         Thread.Sleep(200);
                         Yellow.BackColor = Color.Yellow;
                         break;
