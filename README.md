@@ -4,5 +4,5 @@ Simon says written in C# using Visual Studios. It currently keeps track of a hig
 you can play that long. The sounds were made with Bfxr which can be downladed at: https://www.bfxr.net/. The game can be played by downloading bin.zip.
 Potenial changes:
 -adding sounds to the buttons - Added
--making the buttons flash when the user presses on it 
--fixing the window size and making it look better
+-making the buttons flash when the user presses on it - Ommited (sounds worked better)
+-fixing the window size and making it look better - Added
