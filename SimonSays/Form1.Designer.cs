@@ -119,6 +119,7 @@
             // Score
             // 
             this.Score.AutoSize = true;
+            this.Score.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Score.Location = new System.Drawing.Point(12, 295);
             this.Score.Name = "Score";
             this.Score.Size = new System.Drawing.Size(47, 13);
@@ -128,6 +129,7 @@
             // HighScore
             // 
             this.HighScore.AutoSize = true;
+            this.HighScore.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.HighScore.Location = new System.Drawing.Point(96, 295);
             this.HighScore.Name = "HighScore";
             this.HighScore.Size = new System.Drawing.Size(72, 13);
@@ -139,6 +141,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(175, 313);
             this.Controls.Add(this.HighScore);
             this.Controls.Add(this.Score);
@@ -149,6 +152,8 @@
             this.Controls.Add(this.Blue);
             this.Controls.Add(this.start);
             this.Controls.Add(this.Orange);
+            this.MaximumSize = new System.Drawing.Size(191, 352);
+            this.MinimumSize = new System.Drawing.Size(191, 352);
             this.Name = "Form1";
             this.Text = "Simon Says";
             this.ResumeLayout(false);
