@@ -164,31 +164,37 @@ namespace SimonSays
 
         private void Orange_Click(object sender, EventArgs e)
         {
+            orangeSound.Play();
             isCorrect(0);
         }
 
         private void Blue_Click(object sender, EventArgs e)
         {
+            blueSound.Play();
             isCorrect(1);
         }
 
         private void Green_Click(object sender, EventArgs e)
         {
+            greenSound.Play();
             isCorrect(2);
         }
 
         private void Purple_Click(object sender, EventArgs e)
         {
+            purpleSound.Play();
             isCorrect(3);
         }
 
         private void Red_Click(object sender, EventArgs e)
         {
+            redSound.Play();
             isCorrect(4);
         }
 
         private void Yellow_Click(object sender, EventArgs e)
         {
+            yellowSound.Play();
             isCorrect(5);
         }
 
